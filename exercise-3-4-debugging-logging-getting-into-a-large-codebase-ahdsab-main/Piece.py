@@ -501,3 +501,19 @@ class King(Piece):
         #         _moves.append((7, 5))
         # return _moves
         return self.get_valid_peaceful_moves(game_state) + self.get_valid_piece_takes(game_state)
+
+
+
+
+"""    def test_3_get_valid_piece_takes(self):
+        mock_game_state_ = self.mock_game_state
+        mock_game_state_.is_valid_piece.return_value = False
+        black_knight = chess_engine.Knight('n', 4, 3, Player.PLAYER_2)
+        white_pawn1 = chess_engine.Knight('p', 4, 4, Player.PLAYER_1)
+        white_pawn2 = chess_engine.Knight('p', 4, 4, Player.PLAYER_1)
+        mock_game_state_.board[4][3] = black_knight
+        mock_game_state_.board[6][2] = white_pawn1
+        mock_game_state_.board[3][5] = white_pawn2
+        expected_takes = {(6, 2), (3, 5)}
+        valid_takes = set(black_knight.get_valid_piece_takes(mock_game_state_))
+        self.assertEqual(expected_takes, valid_takes)"""
